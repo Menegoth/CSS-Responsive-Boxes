@@ -9,72 +9,61 @@ body {
 
 .container {
   display: flex;
-  text-align: center;
-  min-height: 98vh;
   flex-direction: row;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
 }
 
-.a {
-  min-width: 100%;
-  min-height: 10vh;
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.a, .f {
+  width: 100%;
+  min-height: 30vh;
 }
 
 .b {
-  min-width: 100%;
-  min-height: 50vh;
+  width: 100%;
+  min-height: 60vh;
 }
 
-.c {
-  min-width: 32%;
-  min-height: 20vh;
-}
-
-.d {
-  min-width: 32%;
-  min-height: 20vh;
-}
-
-.e{
-  min-width: 32%;
-  min-height: 20vh;
-}
-
-.f {
-  min-width: 100%;
-  min-height: 20vh;
+.c, .d, .e {
+  width: 32%;
+  min-height: 30vh;
 }
 
 @media (min-width: 600px) {
 
-  .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .a {
-    min-height: 30vh;
+  .container2 {
+    width: 75%;
+    order: 2;
   }
 
   .b {
-    min-height: 33.3vh;
-    height: max-content;
-    min-width: 75vw;
     order: 1;
+    min-height: 30vh;
   }
 
-  .c, .d, .e {
-    min-height: 33.3vh;
-    min-width: 25vw;
-    order: 3;
-    margin-top: -15em;
-  }
-
-  .f {
-    min-height: 68vh;
-    min-width: 20vw;
-    flex-grow: 1;
+  .c {
     order: 2;
+  }
+
+  .d {
+    order: 3;
+  }
+
+  .e {
+    order: 4;
+  }
+  
+  .f {
+    width: 24%;
+    height: 200px;
+    order: 5;
+    min-height: 60vh;
   }
 
 }
